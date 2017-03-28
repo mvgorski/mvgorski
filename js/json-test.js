@@ -4,7 +4,7 @@ var items = [
     "artist": "Paper Holland",
     "title": "Fast Food",
     "url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/261646020&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true",
-    "duties": "Mastered",
+    "duties": ["Mastered"],
     "date": "April 2016"
 },
 {
@@ -18,12 +18,29 @@ var items = [
 ]
 
     
-$('.portfolio-link').click(function() {
+$('#portfolio .portfolio-link').click(function() {
 
-	$('#myModal h3').text(items[0].artist);
-	$('#myModal h4').text(items[0].title);
+    var itemIndex = $('#portfolio .portfolio-link').index(this);
+    console.log(itemIndex);
 
-	$('#myModal h5').text(items[0].date);
+	$('#myModal h3').text(items[itemIndex].artist);
+	$('#myModal h4').text(items[itemIndex].title);
+    $('#myModal iframe').prop('src', items[itemIndex].url);
 
+    $(items[itemIndex].duties).each(function() {
+
+        $('#myModal .check-list').append('<li><i class="fa fa-check-circle-o" aria-hidden="true"></i>'+this+'</li>')
+
+    });
+
+	$('#myModal h5').text(items[itemIndex].date);
+
+
+});
+
+$('#myModal').on("hidden.bs.modal", function(){
+
+    $('#myModal iframe').prop('src',"");
+    $('#myModal .check-list').html("");
 
 });
