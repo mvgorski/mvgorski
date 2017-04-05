@@ -129,6 +129,8 @@ h5 {
     background: initial; }
   #main-nav .icon-bar {
     background-color: #fff; }
+  #main-nav .navbar-nav {
+    margin-top: 0; }
   #main-nav .navbar-nav > li > a {
     color: #fff;
     font-size: 1.155em; }
@@ -498,7 +500,9 @@ footer .footer-below {
   height: 50px;
   border-radius: 100%;
   font-size: 20px;
-  line-height: 28px; }
+  line-height: 28px;
+  background-color: #534C64;
+  color: #fff; }
 
 .modal-header,
 .modal-footer {
@@ -591,7 +595,8 @@ footer .footer-below {
   padding: 0; }
   .check-list li {
     color: #fff;
-    font-size: 1.155em; }
+    font-size: 1.155em;
+    line-height: 1.7; }
     @media (min-width: 768px) and (max-width: 992px) {
       .check-list li {
         font-size: 1.155em; } }
@@ -602,17 +607,18 @@ footer .footer-below {
       .check-list li {
         font-size: 1.2075em; } }
     .check-list li i {
-      font-size: 1.155em;
-      margin-right: 10px; }
+      font-size: 1.1em;
+      margin-right: 10px;
+      vertical-align: text-bottom; }
       @media (min-width: 768px) and (max-width: 992px) {
         .check-list li i {
-          font-size: 1.155em; } }
+          font-size: 1.1em; } }
       @media (min-width: 992px) and (max-width: 1200px) {
         .check-list li i {
-          font-size: 1.176em; } }
+          font-size: 1.12em; } }
       @media (min-width: 1200px) {
         .check-list li i {
-          font-size: 1.2075em; } }
+          font-size: 1.15em; } }
 
 .points {
   font-size: 20px;

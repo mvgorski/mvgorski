@@ -76,6 +76,9 @@ h5 {
     .icon-bar {
       background-color: #fff;
     }
+    .navbar-nav {
+        margin-top: 0;
+    }
     .navbar-nav>li>a {
         color: #fff;
         @include ms-respond(font-size, 3);
@@ -499,7 +502,9 @@ footer .footer-below {
     height: 50px;
     border-radius: 100%;
     font-size: 20px;
-    line-height: 28px
+    line-height: 28px;
+    background-color: $purple;
+    color: #fff;
 }
 .modal-header,
 .modal-footer {
@@ -608,10 +613,12 @@ footer .footer-below {
     li {
         color: $white;
         @include ms-respond(font-size, 3);
+        line-height: 1.7;
 
         i {
-            @include ms-respond(font-size, 3);
+            @include ms-respond(font-size, 2);
             margin-right: 10px;
+            vertical-align: text-bottom;
         }
     }
 }

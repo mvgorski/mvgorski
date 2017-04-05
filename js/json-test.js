@@ -125,7 +125,7 @@ $('#portfolio .portfolio-link').click(function() {
     $('#myModal iframe').prop('src', items[itemIndex].url);
 
     $(items[itemIndex].duties).each(function() {
-        $('#myModal .check-list').append('<li><i class="fa fa-check-circle-o" aria-hidden="true"></i>'+this+'</li>')
+        $('#myModal .check-list').append('<li><i class="fa fa-check-circle" aria-hidden="true"></i>'+this+'</li>')
     });
 
 	$('#myModal h5').text(items[itemIndex].date);
